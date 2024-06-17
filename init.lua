@@ -884,7 +884,24 @@ require('lazy').setup({
       --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
     end,
   },
-
+  {
+    'declancm/cinnamon.nvim',
+    config = function()
+      require('cinnamon').setup {
+        extra_keymaps = true,
+        override_keymaps = true,
+        max_length = 500,
+        scroll_limit = -1,
+        always_scroll = true,
+      }
+    end,
+  },
+  {
+    'sitiom/nvim-numbertoggle',
+    config = function()
+      require('nvim-numbertoggle').setup {}
+    end,
+  },
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
